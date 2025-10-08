@@ -2,17 +2,32 @@
 <html lang="bg">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Pocket Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Notes</title>
   <meta name="theme-color" content="#14b8a6">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Лепящи бележки с нежен арт стил — работят офлайн.">
+  <meta name="description" content="Лепящи бележки с нежен арт стил — мобилно стабилизирани и офлайн.">
+
+  <script>
+    (function(){
+      const setDvhVar = () => {
+        const vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+        document.documentElement.style.setProperty('--dvh', vh + 'px');
+      };
+      setDvhVar();
+      window.addEventListener('resize', setDvhVar, {passive:true});
+      window.addEventListener('orientationchange', setDvhVar, {passive:true});
+    })();
+  </script>
 </head>
 <body>
   <header class="app-bar">
-    <h1>Notes</h1>
+    <h1>Pocket Notes</h1>
     <button id="installBtn" class="btn small" hidden>Инсталирай</button>
   </header>
 
@@ -34,7 +49,7 @@
     </section>
   </main>
 
-  <footer class="foot">@2025г. Любов...</footer>
+  <footer class="foot">@2025г. с Любов...</footer>
 
   <script src="app.js"></script>
 </body>

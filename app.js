@@ -23,10 +23,7 @@ function loadNotes() {
 }
 function saveNotes(list) { localStorage.setItem(KEY, JSON.stringify(list)); }
 
-function niceRotation() {
-  const deg = (Math.random() * 3.2 - 1.6).toFixed(2);
-  return `${deg}deg`;
-}
+function niceRotation() { const deg = (Math.random() * 3.2 - 1.6).toFixed(2); return `${deg}deg`; }
 function pickColor() { return COLORS[Math.floor(Math.random()*COLORS.length)]; }
 
 function render() {
@@ -49,7 +46,7 @@ function render() {
     const meta = document.createElement('div');
     meta.className = 'meta';
     const d = new Date(n.created);
-    meta.textContent = d.toLocaleDateString(); // only date
+    meta.textContent = d.toLocaleDateString();
 
     const p = document.createElement('p');
     p.textContent = n.content || '';
@@ -92,7 +89,6 @@ saveBtn.onclick = () => {
   render();
 };
 
-// Composer toggle
 toggleBtn?.addEventListener('click', () => {
   composer.classList.toggle('hidden');
   if (!composer.classList.contains('hidden')) {

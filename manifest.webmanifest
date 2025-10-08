@@ -1,7 +1,7 @@
 {
   "name": "Pocket Notes",
   "short_name": "Notes",
-  "description": "Лепящи бележки с нежен арт стил — офлайн и инсталируеми.",
+  "description": "Лепящи бележки с нежен арт стил — мобилно стабилизирани.",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
