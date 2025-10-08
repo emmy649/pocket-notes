@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pocket Notes</title>
+  <meta name="theme-color" content="#14b8a6">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Лепящи бележки с нежен арт стил — работят офлайн.">
+</head>
+<body>
+  <header class="app-bar">
+    <h1>Notes</h1>
+    <button id="installBtn" class="btn small" hidden>Инсталирай</button>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <button id="toggleComposer" class="btn ghost big">＋ Нова</button>
+    </div>
+
+    <section class="composer hidden">
+      <input id="title" class="input" placeholder="Заглавие">
+      <textarea id="content" class="textarea" rows="5" placeholder="Текст на бележката..."></textarea>
+      <div class="row">
+        <button id="save" class="btn">Запази</button>
+      </div>
+    </section>
+
+    <section>
+      <div id="notes" class="grid"></div>
+    </section>
+  </main>
+
+  <footer class="foot">@2025г. Любов...</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
